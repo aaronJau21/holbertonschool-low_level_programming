@@ -5,7 +5,7 @@ int main(void)
 
 	while (number < 10)
 	{
-		putchat(number);
+		putchar(number);
 		number++;
 	}
 
