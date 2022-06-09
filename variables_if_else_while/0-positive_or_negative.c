@@ -13,9 +13,9 @@ int main(void)
 	/* your code goes there */
 	if(n > 0)
 		printf("is positive\n");
-	else if(n==0)
-		printf("is zero");
-	else
+	else if(n<0)
 		printf("is negative");
+	else
+		printf("is zeroi");
 	return (0);
 }
