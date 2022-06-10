@@ -6,12 +6,9 @@
  *
  * return - array 0
  */
-void put(void)
-{
-	printf("_putchar");
-	putchar('\n');
-
-	return;
+void main.h(void)
+}
+	return (printf("_putchar\n"));
 }
 
 int main(void)
