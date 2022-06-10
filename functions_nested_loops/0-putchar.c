@@ -6,12 +6,15 @@
  *
  * return - array 0
  */
+void put(void)
+{
+	printf("_putchar");
+	putchar('\n');
+}
+
 int main(void)
 {
-	int array = "_putchar";
-
-	putchar(array);
-	putchar('\n');
+	put();
 
 	return (0);
 }
