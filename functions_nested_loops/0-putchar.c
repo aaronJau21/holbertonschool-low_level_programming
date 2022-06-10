@@ -1,19 +1,20 @@
-#include<stdio.h>
-/*
- * main - principal function
- *
- * Description - 'Creating a random number and if it positive or negative
- *
- * return - array 0
+#include "main.h"
+
+/**
+ * main - Entry point
+ * Description - 'Creating a random number and if it positive or negative'
+ * Return: Always 0 (Success)
  */
-void main.h(void)
-}
-	return (printf("_putchar\n"));
-}
 
 int main(void)
 {
-	put();
+	char text[] = "_putchar";
+	int i;
+
+	for (i = 0; i < 8; i++)
+	{
+		_putchar(text[i]);
+	}
 
 	return (0);
 }
