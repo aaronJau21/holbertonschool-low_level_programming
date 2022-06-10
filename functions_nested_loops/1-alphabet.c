@@ -4,17 +4,12 @@
  *
  * Return: Always 0.
  */
-int main(void)
+void print_alphabet(void)
 {
-	int al = 'a';
+	char al;
 
-	while (al <= 'z')
-	{
+	for (al = 'a'; al <= 'z'; al++)
 		_putchar(al);
-		al++;
-	}
-	_putchar('\n');
 
-	print_alphabet();
-	return (0);
+	_putchar('\n');
 }
