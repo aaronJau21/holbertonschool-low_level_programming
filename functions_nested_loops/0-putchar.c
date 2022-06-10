@@ -10,6 +10,8 @@ void put(void)
 {
 	printf("_putchar");
 	putchar('\n');
+
+	return;
 }
 
 int main(void)
