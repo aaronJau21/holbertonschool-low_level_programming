@@ -2,26 +2,17 @@
 #include <stdio.h>
 
 /**
- * print_to_98 - print numbers n to 98
- * @n: integer argument
+ * add - Calcule adition beetwen 2 numbers
+ * @num1 : primera variable
+ * @num2 : segunda variable
+ * Description: sume dos enteros y devuelva el resultado.
+ * Return: resultado de la operacion
  */
 
-void print_to_98(int n)
+int add(int n1, int n2)
 {
-	while (n < 98)
-	{
-		printf("%d, ", n);
-		n++;
-	}
+	int resultado;
 
-	while (n > 98)
-	{
-		printf("%d, ", n);
-		n--;
-	}
-
-	if (n == 98)
-		printf("%d", n);
-
-	printf("\n");
+	resultado = n1 + n2;
+	return (resultado);
 }
