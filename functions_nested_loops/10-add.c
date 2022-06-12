@@ -3,8 +3,8 @@
 
 /**
  * add - Calcule adition beetwen 2 numbers
- * @num1 : primera variable
- * @num2 : segunda variable
+ * @n1 : primera variable
+ * @n2 : segunda variable
  * Description: sume dos enteros y devuelva el resultado.
  * Return: resultado de la operacion
  */
