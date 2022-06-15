@@ -9,7 +9,7 @@ void print_triangle(int size)
 {
 	int tri, al, base;
 
-	if (size < 0)
+	if (size <= 0)
 		_putchar('\n');
 
 	for (tri = 1; tri <= size; tri++)
