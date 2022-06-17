@@ -11,19 +11,10 @@ void puts2(char *str)
 
 	lent = strlen(str);
 
-	if (lent % 2 == 0)
+	for (i = 0; i < lent; i++)
 	{
-		for (i = lent / 2; i < lent; i++)
-		{
+		if (i % 2 == 0)
 			_putchar(str[i]);
-		}
-	}
-	else
-	{
-		for (i = (lent / 2) + 1; i < lent; i++)
-		{
-			_putchar(str[i]);
-		}
 	}
 	_putchar('\n');
 }
