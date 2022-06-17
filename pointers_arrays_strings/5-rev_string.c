@@ -7,13 +7,18 @@
  */
 void rev_string(char *s)
 {
-	int a;
-	char string;
+	int h,rigth, lent;
+	char tem;
 
-	string = strlen(s);
+	lent = strlen(s);
 
-	for (a = string - 1; a <= 0; a--)
+	rigth = lent - 1;
+
+	for (h = 0; h < rigth; h++)
 	{
-			
+		tem = s[h];
+		s[h] = s[rigth];
+		s[rigth] = tem;
+		rigth--;
 	}
 }
