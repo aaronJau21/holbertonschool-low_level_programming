@@ -9,7 +9,7 @@
 
 char *cap_string(char *n)
 {
-	int i, s;
+	int i, j;
 	int cap = 32;
 	int separators[12] = {',', ';', '.', '?', '"',
 		 '(', ')', '{', '}', ' ', '\n', '\t'};
@@ -23,11 +23,11 @@ char *cap_string(char *n)
 
 		cap = 0;
 
-		for (s = 0; s <= 12; s++)
+		for (j = 0; j <= 12; j++)
 		{
-			if (n[s] == separators[s])
+			if (n[i] == separators[j])
 			{
-				s = 12;
+				j = 12;
 				cap = 32;
 			}
 		}
