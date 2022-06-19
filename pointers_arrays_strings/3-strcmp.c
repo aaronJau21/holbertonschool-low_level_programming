@@ -1,5 +1,4 @@
 #include "main.h"
-#include <string.h>
 /**
  * *_strcmp - Check 2 strings
  * @s1: First
@@ -12,11 +11,12 @@ int _strcmp(char *s1, char *s2)
 {
 	int i;
 
-	i = strlen(s1) && strlen(s2);
-
-	if (s1[i] != s2[i])
+	for (i = 0; (s1[i] != '\0') && (s2[i] != '\0'); i++)
 	{
-		return (s1[i] - s2[i]);
+		if (s1[i] != s2[i])
+		{
+			return (s1[i] - s2[i]);
+		}
 	}
 	return (0);
 }
