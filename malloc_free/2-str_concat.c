@@ -16,7 +16,10 @@ char *str_concat(char *s1, char *s2)
 
 	if (my_array == NULL)
 		return (NULL);
-
+	if (!s1)
+		s1 = "";
+	if (!s2)
+		s2 = "";
 	a = 0;
 	while (s1[a] != '\0')
 	{
