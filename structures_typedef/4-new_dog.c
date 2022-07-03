@@ -1,47 +1,44 @@
-#include <stdlib.h>
 #include "dog.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 /**
- * new_dog - creates a new dog
- * @name: name of dog
+ * new_dog - create struct and iniliatize fields
+ * @name: name of dof
  * @age: age of dog
- * @owner: owner of dog
- *
- * Return: pointer to new dog
+ * @owner: name of owner
+ * Return: a pointer of struct new_dog
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	unsigned int namelen, ownlen, i;
-	dog_t *dog;
+	dog_t *custom_dog;
+	char *copy_name;
+	char *copy_owner;
 
-	if (name == NULL || owner == NULL)
-		return (NULL);
-	dog = malloc(sizeof(dog_t));
-	if (dog == NULL)
-		return (NULL);
-	for (namelen = 0; name[namelen]; namelen++)
-		;
-	namelen++;
-	dog->name = malloc(namelen * sizeof(char));
-	if (dog->name == NULL)
+	custom_dog = malloc(sizeof(dog_t));
+	if (custom_dog == NULL)
 	{
-		free(dog);
+		free(custom_dog);
 		return (NULL);
 	}
-	for (i = 0; i < namelen; i++)
-		dog->name[i] = name[i];
-	dog->age = age;
-	for (ownlen = 0; owner[ownlen]; ownlen++)
-		;
-	ownlen++;
-	dog->owner = malloc(ownlen * sizeof(char));
-	if (dog->owner == NULL)
+	copy_name = malloc(sizeof(char) * (strlen(name) + 1));
+	if (copy_name == NULL)
 	{
-		free(dog->name);
-		free(dog);
+		free(copy_name);
+		free(custom_dog);
 		return (NULL);
 	}
-	for (i = 0; i < ownlen; i++)
-		dog->owner[i] = owner[i];
-	return (dog);
+	copy_owner = malloc(sizeof(char) * (strlen(owner) + 1));
+	if (copy_owner == NULL)
+	{
+		free(copy_owner);
+		free(copy_name);
+		free(custom_dog);
+		return (NULL);
+	}
+	custom_dog->age = age;
+	custom_dog->name = strcpy(copy_name, name);
+	custom_dog->owner = strcpy(copy_owner, owner);
+	return (custom_dog);
 }
